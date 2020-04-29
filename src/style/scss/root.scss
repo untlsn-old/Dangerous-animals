@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+li{list-style-type: none;}
+a{
+    text-decoration: none;
+    color: #000;
+}
+html, body{
+    font-family: "Exo 2" ,"Comic Sans MS", sans-serif;
+    font-size: 10px;
+    background-color: rgb(240, 240, 240);
+    overflow-x: hidden;
+}
+@media (orientation: portrait){html{font-size: 15px;}}
+.loading{
+    width: 100vh;
+    height: 100vw;
+    position: fixed;
+    background-color: black;
+    background-image: url(/assets/img/leaf.jpg);
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+
+    &::after {
+        content: " ";
+        display: block;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        border: 6px solid #fff;
+        border-color: #ff8801cc transparent #e5306fcc transparent;
+        animation: lds-dual-ring 1.2s infinite alternate;
+    }
+}
+@keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+.animated{transition: 1s;}
+.flex-container{display: flex;}
+.centering{
+    align-items: center;
+    justify-content: center;
+}
+.img-like{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.fill-side{
+    width: 100vw;
+    height: 100vh;
+}
+.reverse-img{
+    transform: scale(-1, 1);
+    *{
+        transform: none;
+    }
+}
+
+// Elements
+.side-header {
+    width: 100%;
+    height: 10em;
+    color: white;
+    position: fixed;
+    justify-content: space-between;
+    z-index: 10;
+    padding: 0 50px;
+    font-size: 7px;
+    a{
+        color: white;
+    }
+}
+.bear {
+    background-image: url(/assets/img/danger-animal-ico-e.png);
+    height: 9em;
+    width: 6em;
+    filter: invert(100%);
+}
+.hamburger{font-size: 4em;}
+.rotator:focus{transform: rotate(90deg);}
+nav.roll-nav{
+    top: 10em;
+    background-color: rgba(0, 0, 0, .7);
+    height: 50vh;
+    width: 100vw;
+    text-align: end;
+    border: rgba(0, 0, 0, 0.3 ) 2px solid;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    .nav-option{
+        color: white;
+        margin-right: 25px;
+        margin-top: 5px;
+        font-size: 30px;
+    }
+}
+.show{right: 0;}
+.hide{right: -110vw;}
+.nav-option{
+    margin: 1rem;
+    font-size: 2rem;
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        transition:.5s;
+        width: 0;
+        height: 3px;
+        bottom: -3px;
+        border-radius: 1rem;
+        right: 0;
+        background-color: rgb(134, 0, 0);
+    }
+
+    &:hover{
+        cursor: pointer;  
+  
+        &::after{
+          width: 100%;
+        }
+    }
+}
+.roll-option{
+    position: relative;
+    &::after{
+        right: -40%;
+    }
+    &:hover{
+        &::after{
+          width: 140%;
+        }
+    }
+    i{
+        position: absolute;
+        top: 7px;
+    }
+    &:focus .under-options{
+        display: block;
+    }
+}
+.under-options{
+    margin-top: 23px;
+    position: absolute;
+    min-width: 140%;
+    display: none;
+    padding: 0 10px;
+    padding-bottom: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    right: -40%;
+    a{
+        display: block;
+        text-align: end;
+        padding: 10px;
+        padding-right: 30%;
+    }
+    &:hover{
+        display: block;
+    }
+}
+
+
+
+.scroled-header{
+    background-color: white;
+    a, i, div{
+        color: black; 
+    }
+    .bear{
+        filter: invert(0);
+    }
+}
+
+.top-img{
+    background-size: cover;
+    background-position: center;
+
+    animation: zoomIn 3s;
+}
+
+.dark-part{
+    background-color: rgb(230, 230, 230);
+}
+
+.title{
+    text-align: center;
+    margin-right: 20vw;
+    height: 7vw;
+    font-size: 6rem;
+}
+
+.column-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 40vh;
+}
+
+.text{
+    color: rgb(90,90,90);
+}
+
+.bottom-text{
+    margin: 5px 4rem;
+    font-size: 3rem;
+}
+
+.left-text{
+    font-size: 5rem;
+    position: relative;
+    left: -100vw;
+}
+
+.set-from-left{
+    transition: 1s;
+    left: 0;
+}
+
+.right-img{
+    width: 50vw;
+    min-height: 40vw;
+    position: relative;
+    right: -100vw;
+}
+
+.set-from-right{
+    transition: 1s;
+    right: 0;
+}
+
+.deco-text{
+    position: absolute;
+    left: 20vw;
+    top: 10vh;
+    h1{
+        font-size: 55px;
+    }
+    h2{
+        font-size: 4rem;
+        margin-left: 1rem;
+    }
+    h3{
+        font-size: 4rem;
+        margin-top: 1rem;
+        margin-left: 5rem;
+    }
+}
+
+@media (orientation: portrait){
+    .nav-option:hover::after{width: 0;}
+    .left-text{font-size: 1.5rem;}
+    .bottom-text{font-size: 1.5rem;}
+    html,body{overflow-x: hidden;}
+    .side-part{
+        text-align: center;
+    }
+    .title{
+        margin: 0;
+        font-size: 2rem;
+    }
+    .column-container{
+        display: flex;
+        flex-direction: column;
+        .text{
+            font-size: 40px;
+            margin-top: 20px;
+        }
+        .img-like{
+            width: 100%;
+            height: 270px;
+        }
+    }
+    .bottom-text{
+        margin: 10px; 
+    }
+    .deco-text{
+        left: 10vw;
+            h1{
+                font-size: 35px;
+            }
+            h2{
+                font-size: 3rem;
+            }
+            h3{
+                font-size: 2rem;
+            }
+        }
+}
+
+.under-options a{
+    color: white;
+}
+
+@keyframes zoomIn{
+    from{transform: scale(1.2);}
+    to{transform: scale(1);}
+}
+
+.show-text{
+    color: rgba(255,255,255,0);
+    
+    animation: show-text-animation 2s forwards 2s;    
+}
+
+@keyframes show-text-animation{
+    from{
+        color: rgba(255,255,255,0);
+        text-shadow: 1px 1px rgba(187, 187, 187, 0);
+    }
+    to{
+        color: rgba(255,255,255,1);
+        text-shadow: 1px 1px #bbb;
+    }
+}

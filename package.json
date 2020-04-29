@@ -1,0 +1,27 @@
+{
+  "name": "dengerous-animals",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "index.html",
+  "scripts": {
+    "server": "live-server",
+    "scss": "node-sass -w --output-style compresst -o src/style/css src/style/scss",
+    "start": "concurrently \"npm run server\" \"npm run scss\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Untlsn/Dangerous-animals.git"
+  },
+  "author": "Untlsn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Untlsn/Dangerous-animals/issues"
+  },
+  "homepage": "https://github.com/Untlsn/Dangerous-animals#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "concurrently": "^5.1.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.13.1"
+  }
+}

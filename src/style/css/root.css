@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css?family=Exo+2&display=swap");
+* { padding: 0; margin: 0; outline: none; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+li { list-style-type: none; }
+
+a { text-decoration: none; color: #000; }
+
+html, body { font-family: "Exo 2" ,"Comic Sans MS", sans-serif; font-size: 10px; background-color: #f0f0f0; overflow-x: hidden; }
+
+@media (orientation: portrait) { html { font-size: 15px; } }
+
+.loading { width: 100vh; height: 100vw; position: fixed; background-color: black; background-image: url(/assets/img/leaf.jpg); z-index: 15; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-size: 100px; }
+
+.loading::after { content: " "; display: block; width: 1em; height: 1em; border-radius: 50%; border: 6px solid #fff; border-color: #ff8801cc transparent #e5306fcc transparent; -webkit-animation: lds-dual-ring 1.2s infinite alternate; animation: lds-dual-ring 1.2s infinite alternate; }
+
+@-webkit-keyframes lds-dual-ring { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+
+@keyframes lds-dual-ring { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+
+.animated { -webkit-transition: 1s; transition: 1s; }
+
+.flex-container { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.centering { -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.img-like { background-repeat: no-repeat; background-size: contain; background-position: center; }
+
+.fill-side { width: 100vw; height: 100vh; }
+
+.reverse-img { -webkit-transform: scale(-1, 1); transform: scale(-1, 1); }
+
+.reverse-img * { -webkit-transform: none; transform: none; }
+
+.side-header { width: 100%; height: 10em; color: white; position: fixed; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; z-index: 10; padding: 0 50px; font-size: 7px; }
+
+.side-header a { color: white; }
+
+.bear { background-image: url(/assets/img/danger-animal-ico-e.png); height: 9em; width: 6em; -webkit-filter: invert(100%); filter: invert(100%); }
+
+.hamburger { font-size: 4em; }
+
+.rotator:focus { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+
+nav.roll-nav { top: 10em; background-color: rgba(0, 0, 0, 0.7); height: 50vh; width: 100vw; text-align: end; border: rgba(0, 0, 0, 0.3) 2px solid; position: absolute; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+nav.roll-nav .nav-option { color: white; margin-right: 25px; margin-top: 5px; font-size: 30px; }
+
+.show { right: 0; }
+
+.hide { right: -110vw; }
+
+.nav-option { margin: 1rem; font-size: 2rem; position: relative; }
+
+.nav-option::after { content: ''; position: absolute; -webkit-transition: .5s; transition: .5s; width: 0; height: 3px; bottom: -3px; border-radius: 1rem; right: 0; background-color: #860000; }
+
+.nav-option:hover { cursor: pointer; }
+
+.nav-option:hover::after { width: 100%; }
+
+.roll-option { position: relative; }
+
+.roll-option::after { right: -40%; }
+
+.roll-option:hover::after { width: 140%; }
+
+.roll-option i { position: absolute; top: 7px; }
+
+.roll-option:focus .under-options { display: block; }
+
+.under-options { margin-top: 23px; position: absolute; min-width: 140%; display: none; padding: 0 10px; padding-bottom: 3px; background-color: rgba(0, 0, 0, 0.5); right: -40%; }
+
+.under-options a { display: block; text-align: end; padding: 10px; padding-right: 30%; }
+
+.under-options:hover { display: block; }
+
+.scroled-header { background-color: white; }
+
+.scroled-header a, .scroled-header i, .scroled-header div { color: black; }
+
+.scroled-header .bear { -webkit-filter: invert(0); filter: invert(0); }
+
+.top-img { background-size: cover; background-position: center; -webkit-animation: zoomIn 3s; animation: zoomIn 3s; }
+
+.dark-part { background-color: #e6e6e6; }
+
+.title { text-align: center; margin-right: 20vw; height: 7vw; font-size: 6rem; }
+
+.column-container { display: -ms-grid; display: grid; -ms-grid-columns: 1fr 1fr; grid-template-columns: 1fr 1fr; min-height: 40vh; }
+
+.text { color: #5a5a5a; }
+
+.bottom-text { margin: 5px 4rem; font-size: 3rem; }
+
+.left-text { font-size: 5rem; position: relative; left: -100vw; }
+
+.set-from-left { -webkit-transition: 1s; transition: 1s; left: 0; }
+
+.right-img { width: 50vw; min-height: 40vw; position: relative; right: -100vw; }
+
+.set-from-right { -webkit-transition: 1s; transition: 1s; right: 0; }
+
+.deco-text { position: absolute; left: 20vw; top: 10vh; }
+
+.deco-text h1 { font-size: 55px; }
+
+.deco-text h2 { font-size: 4rem; margin-left: 1rem; }
+
+.deco-text h3 { font-size: 4rem; margin-top: 1rem; margin-left: 5rem; }
+
+@media (orientation: portrait) { .nav-option:hover::after { width: 0; }
+  .left-text { font-size: 1.5rem; }
+  .bottom-text { font-size: 1.5rem; }
+  html, body { overflow-x: hidden; }
+  .side-part { text-align: center; }
+  .title { margin: 0; font-size: 2rem; }
+  .column-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+  .column-container .text { font-size: 40px; margin-top: 20px; }
+  .column-container .img-like { width: 100%; height: 270px; }
+  .bottom-text { margin: 10px; }
+  .deco-text { left: 10vw; }
+  .deco-text h1 { font-size: 35px; }
+  .deco-text h2 { font-size: 3rem; }
+  .deco-text h3 { font-size: 2rem; } }
+
+.under-options a { color: white; }
+
+@-webkit-keyframes zoomIn { from { -webkit-transform: scale(1.2); transform: scale(1.2); }
+  to { -webkit-transform: scale(1); transform: scale(1); } }
+
+@keyframes zoomIn { from { -webkit-transform: scale(1.2); transform: scale(1.2); }
+  to { -webkit-transform: scale(1); transform: scale(1); } }
+
+.show-text { color: rgba(255, 255, 255, 0); -webkit-animation: show-text-animation 2s forwards 2s; animation: show-text-animation 2s forwards 2s; }
+
+@-webkit-keyframes show-text-animation { from { color: rgba(255, 255, 255, 0);
+    text-shadow: 1px 1px rgba(187, 187, 187, 0); }
+  to { color: white;
+    text-shadow: 1px 1px #bbb; } }
+
+@keyframes show-text-animation { from { color: rgba(255, 255, 255, 0);
+    text-shadow: 1px 1px rgba(187, 187, 187, 0); }
+  to { color: white;
+    text-shadow: 1px 1px #bbb; } }

@@ -1,0 +1,17 @@
+@import url(./root.css);
+.owl-img { background-image: url(/assets/img/owl.jpg); }
+
+.img-place { margin: 50px 10px; display: -ms-grid; display: grid; -ms-grid-columns: 1fr 1fr; grid-template-columns: 1fr 1fr; justify-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.galery-img { width: 45vw; height: 35vw; }
+
+.galery-img:hover { cursor: pointer; }
+
+.fullscreen-img { width: 90vw; max-height: 90vh; }
+
+.fullscreen-container { width: 100vw; height: 100vh; top: 0; position: fixed; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; z-index: -1; }
+
+.fc-in-use { z-index: 20; background-color: rgba(0, 0, 0, 0.9); }
+
+@media (orientation: portrait) { .img-place { -ms-grid-columns: 1fr; grid-template-columns: 1fr; }
+  .galery-img { margin-top: 30px; width: 90vw; height: 50vw; } }

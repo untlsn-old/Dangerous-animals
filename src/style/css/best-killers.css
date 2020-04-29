@@ -1,0 +1,25 @@
+@import url(./root.css);
+.frog-img { background-image: url(/assets/img/poison-frog.jpg); }
+
+.kissingbug-img { background-image: url(/assets/img/kissing-bug.jpg); }
+
+.humboldt-img { background-image: url(/assets/img/humbold.jpg); }
+
+.cobra-img { background-image: url(/assets/img/cobra.jpg); }
+
+.shark-img { background-image: url(/assets/img/shark.jpg); }
+
+.fugu-img { background-image: url(/assets/img/fugu.jpg); }
+
+.scorpion-img { background-image: url(/assets/img/deathstalker.jpg); }
+
+.mamba-img { background-image: url(/assets/img/mamba.jpg); }
+
+.conus-img { background-image: url(/assets/img/conus.jpg); }
+
+.see-wasp-img { background-image: url(/assets/img/see-wasp.jpg); }
+
+.blue-frog-img { background-image: url(/assets/img/blue-frog.jpg); }
+
+@media (orientation: portrait) { .deco-text { left: 40vw; top: 60vh; }
+  .deco-text h3 { margin-left: -20px; } }
